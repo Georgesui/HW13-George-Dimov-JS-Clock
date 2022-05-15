@@ -45,6 +45,8 @@ function SetTime(element) {
 // 	this.element.classList.toggle('header__clock-small');
 // }
 
+// Вызываем без задержки 1000 мс во избежании некрасивого перехода часов из одного формата в другой при клике.
+
 let firstClockOnPage = document.querySelector('.header__clock');
 let firstResultOfClock = new SetTime(firstClockOnPage);
 setInterval(() => firstResultOfClock.render(),)
@@ -53,8 +55,7 @@ setInterval(() => firstResultOfClock.render(),)
 // firstClockOnPage.changeVersion();
 
 // 4.6 Чтобы убедиться, что функция-конструктор применима и универсальна.
-// вызываем без задержки 1000 мс во избежании некрасивого перехода часов из одного формата в другой. Вторые вызвал с 
-// задержкой/
+// Вторые вызвал с задержкой/
 
 let secondClockOnPage = document.querySelector('.header__clock-second');
 let secondResultOfClock = new SetTime(secondClockOnPage);
