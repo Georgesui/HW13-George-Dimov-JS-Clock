@@ -11,6 +11,7 @@ function SetTime(element) {
 			this.element.innerHTML = new Date().toTimeString().split(' ')[0].substring(0, 5);
 		}
 	}
+
 	this.changeVersion = function () {
 		this.fullFormat = !this.fullFormat;
 		this.element.classList.toggle('header__clock-small');
@@ -40,6 +41,7 @@ function SetTime(element) {
 // 		this.element.innerHTML = new Date().toTimeString().split(' ')[0].substring(0, 5);
 // 	}
 // }
+
 // SetTime.prototype.changeVersion = function () {
 // 	this.fullFormat = !this.fullFormat;
 // 	this.element.classList.toggle('header__clock-small');
@@ -49,7 +51,7 @@ function SetTime(element) {
 
 let firstClockOnPage = document.querySelector('.header__clock');
 let firstResultOfClock = new SetTime(firstClockOnPage);
-setInterval(() => firstResultOfClock.render(),)
+setInterval(() => firstResultOfClock.render(),);
 
 // Для решения пункта 4.5 был использован метод "changeVersion()" - его можно вызвать и он будет работать - 
 // firstClockOnPage.changeVersion();
